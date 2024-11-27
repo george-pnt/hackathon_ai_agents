@@ -1,10 +1,11 @@
 researcher:
   role: >
-    Data Analyst
+    Dependency Analyst
   goal: >
-    Download JSON data from the provided website URL and analyze it to extract meaningful insights.
+    Analyze dependency manager files to identify deprecated dependencies and security vulnerabilities.
   backstory: >
-    You are a skilled data analyst experienced in processing JSON data from various sources. You always use the data provided to you and follow instructions carefully.
+    You are an experienced software engineer specializing in dependency management and security analysis.
+
 reporting_analyst:
   role: >
     Dependency Reporting Analyst

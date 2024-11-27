@@ -11,9 +11,9 @@ class JSONDownloaderToolSchema(BaseModel):
     website_url: str = Field(..., description="The URL of the website to download JSON data from")
 
 
-class JSONDownloader(BaseTool):
-    name: str = "JSONDownloader"
-    description: str = "A tool that downloads JSON data from a specified URL."
+class DependencyFileDownloader(BaseTool):
+    name: str = "DependencyFileDownloader"
+    description: str = "Downloads dependency manager files from a specified URL."
 
     args_schema: Type[BaseModel] = JSONDownloaderToolSchema
 

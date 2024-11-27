@@ -1,6 +1,6 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
-from .tools.json_downloader import JSONDownloader
+from .tools.json_downloader import DependencyFileDownloader
 
 # Uncomment the following line to use an example of a custom tool
 # from templatecrew.tools.custom_tool import MyCustomTool
@@ -17,7 +17,7 @@ class TemplatecrewCrew():
 		return Agent(
 			config=self.agents_config['researcher'],
             tools=[
-               JSONDownloader()
+               DependencyFileDownloader()
             ],
 			verbose=True
 		)

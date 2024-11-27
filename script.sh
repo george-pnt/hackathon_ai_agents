@@ -13,12 +13,12 @@ fi
 REGISTRY_URL="${REGISTRY_URL:-https://dev-agentic-registry.house-of-communication.world}"
 AUTH_USERNAME="${BASIC_AUTH_USERNAME}"
 AUTH_PASSWORD="${BASIC_AUTH_PASSWORD}"
-WORKFLOW_NAME="KnowledgeCrew"
-NODE_ID="a622b8a0-bbef-4bab-854d-b061ee18e800"
+WORKFLOW_NAME="DependencyAnalysisWorkflow"
+NODE_ID="e25de453-8b99-4e45-8c54-0cf2693825b1"
 
 WORKFLOW_INPUTS='{
   "inputs": {
-    "question": "test"
+    "dependency_file_url": "https://costeaalex.com/hackathon/composer.json"
   },
   "workflow": "'"$WORKFLOW_NAME"'",
   "node_id": "'"$NODE_ID"'"

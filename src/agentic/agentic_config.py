@@ -9,12 +9,12 @@ workflows : dict[str,BaseWorkflowConfig] = {}
 from kodo_template.crew import TemplatecrewCrew as Crew
 
 
-workflows["JSONDataAnalysisWorkflow"] = CrewaiWorkflowConfig(
-    description="Downloads and analyzes JSON data from a specified website URL.",
+workflows["DependencyAnalysisWorkflow"] = CrewaiWorkflowConfig(
+    description="Analyzes dependency manager files to identify deprecated dependencies and security vulnerabilities.",
     inputs={
-        "website_url": "The URL of the website to download JSON data from"
+       "dependency_file_url": "The URL of the dependency manager file to analyze"
     },
     crew_cls=Crew,
 )
 
-config = AgenticConfig(name="JSONDataAnalysisNode", workflows=workflows)
+config = AgenticConfig(name="DependencyAnalysisNode", workflows=workflows)

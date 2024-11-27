@@ -1,11 +1,11 @@
 research_task:
   description: >
-    Your task is to download JSON data from the provided website URL: {website_url} using the JSONDownloader tool.
+    Your task is to download the dependency manager file from the provided URL: {dependency_file_url} using the DependencyFileDownloader tool.
     You must use this URL and not any other.
-    Then, analyze the JSON data to identify any deprecated dependencies or security vulnerabilities.
-    Use any other tools available to assist in your analysis.
+    Then, analyze the file to identify any deprecated dependencies or known security vulnerabilities.
+    Use the tools available to assist in your analysis.
   expected_output: >
-    A detailed report summarizing the findings from the JSON data analysis.
+    A detailed report summarizing any deprecated dependencies and security vulnerabilities found in the dependency file.
   agent: researcher
 
 reporting_task:
