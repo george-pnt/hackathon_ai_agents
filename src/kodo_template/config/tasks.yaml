@@ -1,22 +1,19 @@
 research_task:
   description: >
-    Analyze the PHP file located at {topic} to determine if it has any deprecated dependencies.
-    Use Packagist.org as the source of truth to verify the deprecation status of each dependency.
-    The task involves:
-    - Extracting dependencies from the provided `composer.json` file.
-    - Querying Packagist to identify if any listed dependencies are marked as deprecated.
-    The focus is solely on identifying whether deprecated dependencies exist, without further recommendations or implementation details.
+    Your task is to download JSON data from the provided website URL: {website_url} using the JSONDownloader tool.
+    You must use this URL and not any other.
+    Then, analyze the JSON data to identify any deprecated dependencies or security vulnerabilities.
+    Use any other tools available to assist in your analysis.
   expected_output: >
-    A simple boolean response: true if any deprecated dependencies are detected, false otherwise.
+    A detailed report summarizing the findings from the JSON data analysis.
   agent: researcher
 
 reporting_task:
   description: >
-    Generate a detailed report listing the dependencies from the PHP file at {topic}, specifically highlighting any that are deprecated.
+    Generate a detailed report based on the analysis, listing each dependency with its deprecation and security status.
     The report should:
-    - Provide a list of dependencies from the `composer.json` file.
-    - Clearly mark each dependency as either deprecated or not deprecated based on Packagist.org metadata.
-    This task focuses solely on presenting the deprecation status for each dependency.
+    - Clearly present the findings from the analysis.
+    - Be formatted for readability.
   expected_output: >
-    A list of dependencies with their deprecation status: "Deprecated" or "Not Deprecated."
+    A comprehensive report listing each dependency, its version, deprecation status, and security status.
   agent: reporting_analyst

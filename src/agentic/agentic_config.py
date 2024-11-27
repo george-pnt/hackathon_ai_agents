@@ -8,16 +8,13 @@ workflows : dict[str,BaseWorkflowConfig] = {}
 # If you are getting any erros please correct the import path
 from kodo_template.crew import TemplatecrewCrew as Crew
 
-# Define workflows here
-# key is the workflow name
-workflows["_123_"] = CrewaiWorkflowConfig(
-    # Description of the workflow
-    description="this workflow is a template workflow",
-    # Inputs for the workflow
-    inputs={"topic": "The topic to make a research about"},
-    # The crew class to be used
+
+workflows["JSONDataAnalysisWorkflow"] = CrewaiWorkflowConfig(
+    description="Downloads and analyzes JSON data from a specified website URL.",
+    inputs={
+        "website_url": "The URL of the website to download JSON data from"
+    },
     crew_cls=Crew,
 )
 
-# Create the config object. Change the name to the name of your node
-config = AgenticConfig(name="_123_", workflows=workflows)
+config = AgenticConfig(name="JSONDataAnalysisNode", workflows=workflows)

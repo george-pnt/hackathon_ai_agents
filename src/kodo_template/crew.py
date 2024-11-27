@@ -1,5 +1,6 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
+from .tools.json_downloader import JSONDownloader
 
 # Uncomment the following line to use an example of a custom tool
 # from templatecrew.tools.custom_tool import MyCustomTool
@@ -15,7 +16,9 @@ class TemplatecrewCrew():
 	def researcher(self) -> Agent:
 		return Agent(
 			config=self.agents_config['researcher'],
-			# tools=[MyCustomTool()], # Example of custom tool, loaded on the beginning of file
+            tools=[
+               JSONDownloader()
+            ],
 			verbose=True
 		)
 
