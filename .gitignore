@@ -2,3 +2,8 @@
 __pycache__
 .DS_Store
 .node_id
+.idea/.gitignore
+.idea/hackathon_ai_agents.iml
+.idea/modules.xml
+.idea/php.xml
+.idea/vcs.xml
