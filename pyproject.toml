@@ -1,0 +1,28 @@
+[project]
+name = "kodo-template"
+version = "0.0.1"
+description = "Kodosumi Template Workflow"
+authors = [
+    { name = "Plan.net", email = "plan-net@house-of-communication.com" },
+]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.70.1,<1.0.0",
+    "agenticos>=0.0.3.156507",
+    "fastapi[all]>=0.109.0",
+    "uvicorn>=0.27.0",
+    "python-dotenv>=1.0.0"
+]
+
+[project.scripts]
+kodo_template = "kodo_template.main:run"
+run_crew = "kodo_template.main:run"
+train = "kodo_template.main:train"
+replay = "kodo_template.main:replay"
+test = "kodo_template.main:test"
+
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
