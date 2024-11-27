@@ -12,7 +12,7 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs'
+        "dependency_file_url": "https://costeaalex.com/hackathon/composer.json"
     }
     TemplatecrewCrew().crew().kickoff(inputs=inputs)
 
@@ -22,7 +22,7 @@ def train():
     Train the crew for a given number of iterations.
     """
     inputs = {
-        "topic": "AI LLMs"
+       "dependency_file_url": "https://costeaalex.com/hackathon/composer.json"
     }
     try:
         TemplatecrewCrew().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
